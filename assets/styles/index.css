@@ -23,50 +23,16 @@ body {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: Merriweather;
   font-style: italic;
 }
 
-header {
-  color: whitesmoke;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-}
-
 li {
   display: flex;
-  width: 100%;
-}
-
-nav {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 80%;
-  background: rgba(181, 181, 181, 0.367);
-}
-nav ul {
-  display: flex;
   align-items: center;
-}
-nav button {
-  border: none;
-  color: whitesmoke;
-  background: none;
-}
-nav a {
-  color: whitesmoke;
-}
-
-.nav-tab {
-  width: 40%;
-}
-
-.nav-icons {
-  width: 30%;
+  height: 100%;
+  width: 100%;
 }
 
 section {
@@ -95,6 +61,87 @@ section img {
 .article2-container,
 .article3-container {
   width: 80%;
+}
+
+header {
+  margin-top: 150px;
+  color: whitesmoke;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-container h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 44%;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+.header-container p {
+  margin: 40px auto 70px;
+}
+.header-container .fa-solid {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  font-size: 1.1rem;
+}
+
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  background: rgba(181, 181, 181, 0.549);
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: whitesmoke;
+  background: none;
+}
+nav a {
+  color: whitesmoke;
+}
+
+.nav-tab {
+  width: 45%;
+}
+.nav-tab button {
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.nav-tab button:hover {
+  cursor: pointer;
+  background: rgb(243, 243, 243);
+  color: black;
+}
+
+.nav-icons {
+  width: 30%;
+  font-size: 1.2rem;
+}
+.nav-icons li:hover {
+  cursor: pointer;
+  background: rgb(243, 243, 243);
+  color: black;
 }
 
 .contact-area {

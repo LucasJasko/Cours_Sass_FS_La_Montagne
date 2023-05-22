@@ -1,0 +1,46 @@
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    background: rgba(181, 181, 181, 0.549);
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    button {
+        height: 100%;
+        width: 100%;
+        border: none;
+        color: whitesmoke;
+        background: none;
+    }
+    a {
+        color: whitesmoke;
+    }
+}
+.nav-tab {
+    width: 45%;
+    button {
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+.nav-tab button:hover {
+    cursor: pointer;
+    background: rgb(243, 243, 243);
+    color: black;
+}
+.nav-icons {
+    width: 30%;
+    font-size: 1.2rem;
+     li:hover {
+        cursor: pointer;
+        background: rgb(243, 243, 243);
+        color: black;
+     }
+}

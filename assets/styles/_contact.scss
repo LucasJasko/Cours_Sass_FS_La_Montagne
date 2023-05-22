@@ -1,0 +1,39 @@
+.contact-area {
+    margin: 30px auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "form adr1 adr2"
+    "form ph1 ph2"
+    "form em1 em2"
+    "form so1 so2";
+
+    .contact-area form {
+        grid-area: form;
+    }
+    .address1 {
+        grid-area: adr1;
+    }
+    .address2 {
+        grid-area: adr2;
+    }
+    .phone1 {
+        grid-area: ph1;
+    }
+    .phone2 {
+        grid-area: ph2;
+    }
+    .email1 {
+        grid-area: em1;
+    }
+    .email2 {
+        grid-area: em2;
+    }
+    .social1 {
+        grid-area: so1;
+    }
+    .social2 {
+        grid-area: so2;
+    }
+}
