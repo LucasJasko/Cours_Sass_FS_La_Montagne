@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+title {
+    display: none;
+}
+script {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+
+body {
+    background: url(/assets/images/bg.jpg) fixed center/cover;
+    font-family: Inter;
+}
+
+p {
+    font-size: 1rem;
+    font-family: Merriweather;
+    font-style: italic;
+}
+
+header {
+    color: whitesmoke;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    background: rgba(181, 181, 181, 0.367);
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    button {
+        border: none;
+        color: whitesmoke;
+        background: none;
+    }
+    a {
+        color: whitesmoke;
+    }
+}
+
+.nav-tab {
+    width: 40%;
+}
+
+.nav-icons {
+    width: 30%;
+}
+
+
+section {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 80%;
+    background: whitesmoke;
+    
+    img {
+        display: block;
+    margin: 0 auto;
+        width: 80%;
+    }
+}
+
+.article2-3 {
+    display: flex;
+}
+
+.article2,
+.article3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article2-container,
+.article3-container {
+    width: 80%;
+}
+
+.contact-area {
+    margin: 30px auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "form adr1 adr2"
+    "form ph1 ph2"
+    "form em1 em2"
+    "form so1 so2";
+
+    .contact-area form {
+        grid-area: form;
+    }
+    .address1 {
+        grid-area: adr1;
+    }
+    .address2 {
+        grid-area: adr2;
+    }
+    .phone1 {
+        grid-area: ph1;
+    }
+    .phone2 {
+        grid-area: ph2;
+    }
+    .email1 {
+        grid-area: em1;
+    }
+    .email2 {
+        grid-area: em2;
+    }
+    .social1 {
+        grid-area: so1;
+    }
+    .social2 {
+        grid-area: so2;
+    }
+}
