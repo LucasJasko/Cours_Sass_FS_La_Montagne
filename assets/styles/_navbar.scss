@@ -33,14 +33,16 @@ nav {
 .nav-tab button:hover {
     cursor: pointer;
     background: rgb(243, 243, 243);
-    color: black;
+    color: rgb(18, 18, 18);
 }
 .nav-icons {
     width: 30%;
     font-size: 1.2rem;
      li:hover {
+        a {
+            color: rgb(18, 18, 18);
+        }
         cursor: pointer;
         background: rgb(243, 243, 243);
-        color: black;
      }
 }

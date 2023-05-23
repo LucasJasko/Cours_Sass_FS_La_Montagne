@@ -1,8 +1,8 @@
 .contact-area {
     margin: 30px auto 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: 100px 100px 100px 100px;
     grid-template-areas: 
     "form adr1 adr2"
     "form ph1 ph2"
@@ -13,27 +13,63 @@
         grid-area: form;
     }
     .address1 {
+        display: flex;
+        align-items: center;
         grid-area: adr1;
     }
     .address2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
         grid-area: adr2;
     }
     .phone1 {
+        display: flex;
+        align-items: center;
         grid-area: ph1;
     }
     .phone2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
         grid-area: ph2;
     }
     .email1 {
+        display: flex;
+        align-items: center;
         grid-area: em1;
     }
     .email2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
         grid-area: em2;
     }
     .social1 {
+        display: flex;
+        align-items: center;
         grid-area: so1;
     }
     .social2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
         grid-area: so2;
+
+        ul {
+            display: flex;
+        }
+        a {
+            border-radius: 10px;
+        }
+    }
+
+    h6 {
+        color: gray;
+        text-transform: uppercase;
+    }
+
+    p {
+        text-align: left;
     }
 }
