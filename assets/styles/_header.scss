@@ -1,12 +1,24 @@
 header {
+  position: relative;
   margin: 0 auto;
-  color: whitesmoke;
+  color: $white1;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  opacity: 0;
+
+  @keyframes headeranim {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   h1 {
     display: block;
     margin: 0 auto;
@@ -28,5 +40,54 @@ header {
     border: 2px solid whitesmoke;
     border-radius: 50px;
     font-size: 1.1rem;
+  }
+  nav {
+    position: absolute;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    background: rgba(181, 181, 181, 0.549);
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    button {
+      height: 100%;
+      width: 100%;
+      border: none;
+      color: whitesmoke;
+      background: none;
+    }
+    a {
+      color: whitesmoke;
+    }
+  }
+  .nav-tab {
+    width: 45%;
+    button {
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+  .nav-tab button:hover {
+    cursor: pointer;
+    background: rgb(243, 243, 243);
+    color: rgb(18, 18, 18);
+  }
+  .nav-icons {
+    width: 30%;
+    font-size: 1.2rem;
+    li:hover {
+      a {
+        color: rgb(18, 18, 18);
+      }
+      cursor: pointer;
+      background: rgb(243, 243, 243);
+    }
   }
 }
