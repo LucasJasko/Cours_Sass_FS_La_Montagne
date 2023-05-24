@@ -1,19 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
-title {
-  display: none;
-}
-
-script {
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
-  justify-content: center;
   text-decoration: none;
   font-family: Inter;
 }
@@ -44,7 +35,7 @@ img {
 header {
   margin: 0 auto;
   color: whitesmoke;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -101,7 +92,7 @@ nav a {
 }
 .nav-tab button {
   letter-spacing: 1px;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -125,64 +116,12 @@ nav a {
 }
 
 .contact-area {
+  position: relative;
   margin: 30px auto 60px;
   display: grid;
-  grid-template-columns: 50% 20% 30%;
-  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 50% 10% 40%;
+  grid-template-rows: 150px 150px 150px 150px;
   grid-template-areas: "form adr1 adr2" "form ph1 ph2" "form em1 em2" "form so1 so2";
-}
-.contact-area .contact-area form {
-  grid-area: form;
-}
-.contact-area .address1 {
-  display: flex;
-  align-items: center;
-  grid-area: adr1;
-}
-.contact-area .address2 {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  grid-area: adr2;
-}
-.contact-area .phone1 {
-  display: flex;
-  align-items: center;
-  grid-area: ph1;
-}
-.contact-area .phone2 {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  grid-area: ph2;
-}
-.contact-area .email1 {
-  display: flex;
-  align-items: center;
-  grid-area: em1;
-}
-.contact-area .email2 {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  grid-area: em2;
-}
-.contact-area .social1 {
-  display: flex;
-  align-items: center;
-  grid-area: so1;
-}
-.contact-area .social2 {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  grid-area: so2;
-}
-.contact-area .social2 ul {
-  display: flex;
-}
-.contact-area .social2 a {
-  border-radius: 10px;
 }
 .contact-area h6 {
   color: gray;
@@ -191,10 +130,168 @@ nav a {
 .contact-area p {
   text-align: left;
 }
+.contact-area form {
+  grid-area: form;
+}
+.contact-area form label,
+.contact-area form input,
+.contact-area form textarea {
+  text-align: left;
+  margin: 30px auto;
+  width: 90%;
+  display: block;
+  color: rgb(113, 113, 113);
+}
+.contact-area form label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.contact-area form input[type=text] {
+  border: 1px solid rgba(128, 128, 128, 0.442);
+  border-radius: 3px;
+  height: 30px;
+  outline: none;
+}
+.contact-area form textarea {
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.431);
+  border-radius: 3px;
+  height: 200px;
+}
+.contact-area form input[type=submit] {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  border: 1px solid rgb(184, 184, 184);
+  color: rgb(113, 113, 113);
+  text-transform: uppercase;
+  width: 30%;
+}
+.contact-area form input[type=submit]:hover {
+  background: rgb(18, 18, 18);
+  color: whitesmoke;
+}
+.contact-area .address1,
+.contact-area .address2,
+.contact-area .phone1,
+.contact-area .phone2,
+.contact-area .email1,
+.contact-area .email2,
+.contact-area .social1,
+.contact-area .social2 {
+  margin: auto;
+}
+.contact-area .address1,
+.contact-area .phone1,
+.contact-area .email1,
+.contact-area .social1 {
+  text-align: center;
+}
+.contact-area .address2,
+.contact-area .phone2,
+.contact-area .email2,
+.contact-area .social2 {
+  color: rgba(128, 128, 128, 0.498);
+  width: 80%;
+  text-align: left;
+}
+.contact-area .address2 p,
+.contact-area .phone2 p,
+.contact-area .email2 p,
+.contact-area .social2 p {
+  font-size: 0.8rem;
+}
+.contact-area .address1 {
+  grid-area: adr1;
+}
+.contact-area .address1:after {
+  position: absolute;
+  content: "";
+  background: rgb(196, 196, 196);
+  height: 1px;
+  width: 50%;
+  left: 50%;
+  top: 25%;
+}
+.contact-area .address2 {
+  justify-content: left;
+  grid-area: adr2;
+}
+.contact-area .phone1 {
+  grid-area: ph1;
+}
+.contact-area .phone1:after {
+  position: absolute;
+  content: "";
+  background: rgb(196, 196, 196);
+  height: 1px;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+}
+.contact-area .phone2 {
+  justify-content: left;
+  grid-area: ph2;
+}
+.contact-area .email1 {
+  grid-area: em1;
+}
+.contact-area .email1:after {
+  position: absolute;
+  content: "";
+  background: rgb(196, 196, 196);
+  height: 1px;
+  width: 50%;
+  left: 50%;
+  top: 75%;
+}
+.contact-area .email2 {
+  justify-content: left;
+  grid-area: em2;
+}
+.contact-area .social1 {
+  grid-area: so1;
+}
+.contact-area .social2 {
+  justify-content: left;
+  grid-area: so2;
+}
+.contact-area .social2 ul {
+  width: 80%;
+  display: flex;
+}
+.contact-area .social2 li {
+  display: list-item;
+}
+.contact-area .social2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(128, 128, 128, 0.341);
+  border-radius: 50px;
+}
+.contact-area .social2 a:hover {
+  color: whitesmoke;
+}
+
+.contact-area:after {
+  position: absolute;
+  content: "";
+  transform: translateX(-50%);
+  background: rgb(196, 196, 196);
+  height: 100%;
+  width: 1px;
+  left: 50%;
+}
 
 section {
+  display: grid;
   margin: 0 auto;
-  padding: 30px 0;
   width: 80%;
   background: whitesmoke;
 }
@@ -214,18 +311,17 @@ section a:hover {
 }
 
 .link1 {
-  margin: 50px auto;
+  margin: 60px auto;
 }
 
 .article1 .article1-container {
-  position: relative;
   margin: 0 auto;
   width: 80%;
 }
 .article1 h4 {
   font-weight: 100;
   position: relative;
-  margin: 30px auto;
+  margin: 60px auto;
   font-family: Merriweather;
 }
 .article1 h4:before {
@@ -233,7 +329,7 @@ section a:hover {
   content: "";
   left: 0;
   bottom: 50%;
-  width: 35%;
+  width: 40%;
   height: 1px;
   background: rgba(128, 128, 128, 0.341);
 }
@@ -242,7 +338,7 @@ section a:hover {
   content: "";
   right: 0;
   bottom: 50%;
-  width: 35%;
+  width: 40%;
   height: 1px;
   background: rgba(128, 128, 128, 0.341);
 }
@@ -260,7 +356,7 @@ section a:hover {
   line-height: 40px;
 }
 
-.article1:after {
+.article1-container:after {
   position: absolute;
   content: "";
   transform: translateX(-50%);
@@ -281,15 +377,15 @@ section a:hover {
 }
 .article2 h5,
 .article3 h5 {
+  margin-top: 60px;
+  text-align: center;
   height: 50px;
-  display: flex;
-  align-items: center;
   font-family: Merriweather;
   font-weight: 100;
 }
 .article2 h3,
 .article3 h3 {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   font-size: 1.5rem;
   height: 80px;
   display: flex;

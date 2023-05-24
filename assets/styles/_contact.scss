@@ -1,75 +1,177 @@
 .contact-area {
-    margin: 30px auto 60px;
-    display: grid;
-    grid-template-columns: 50% 20% 30%;
-    grid-template-rows: 100px 100px 100px 100px;
-    grid-template-areas: 
+  position: relative;
+  margin: 30px auto 60px;
+  display: grid;
+  grid-template-columns: 50% 10% 40%;
+  grid-template-rows: 150px 150px 150px 150px;
+  grid-template-areas:
     "form adr1 adr2"
     "form ph1 ph2"
     "form em1 em2"
     "form so1 so2";
+  h6 {
+    color: gray;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: left;
+  }
+  form {
+    grid-area: form;
 
-    .contact-area form {
-        grid-area: form;
+    label,
+    input,
+    textarea {
+      text-align: left;
+      margin: 30px auto;
+      width: 90%;
+      display: block;
+      color: rgb(113, 113, 113);
     }
-    .address1 {
-        display: flex;
-        align-items: center;
-        grid-area: adr1;
+    label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
     }
-    .address2 {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        grid-area: adr2;
+    input[type="text"] {
+      border: 1px solid rgba(128, 128, 128, 0.442);
+      border-radius: 3px;
+      height: 30px;
+      outline: none;
     }
-    .phone1 {
-        display: flex;
-        align-items: center;
-        grid-area: ph1;
+    textarea {
+      resize: none;
+      outline: none;
+      border: 1px solid rgba(128, 128, 128, 0.431);
+      border-radius: 3px;
+      height: 200px;
     }
-    .phone2 {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        grid-area: ph2;
+    input[type="submit"] {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 10px 30px;
+      letter-spacing: 2px;
+      border: 1px solid rgb(184, 184, 184);
+      color: rgb(113, 113, 113);
+      text-transform: uppercase;
+      width: 30%;
     }
-    .email1 {
-        display: flex;
-        align-items: center;
-        grid-area: em1;
+    input[type="submit"]:hover {
+      background: rgb(18, 18, 18);
+      color: whitesmoke;
     }
-    .email2 {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        grid-area: em2;
-    }
-    .social1 {
-        display: flex;
-        align-items: center;
-        grid-area: so1;
-    }
-    .social2 {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        grid-area: so2;
+  }
+  .address1,
+  .address2,
+  .phone1,
+  .phone2,
+  .email1,
+  .email2,
+  .social1,
+  .social2 {
+    margin: auto;
+  }
 
-        ul {
-            display: flex;
-        }
-        a {
-            border-radius: 10px;
-        }
-    }
-
-    h6 {
-        color: gray;
-        text-transform: uppercase;
-    }
+  .address1,
+  .phone1,
+  .email1,
+  .social1 {
+    text-align: center;
+  }
+  .address2,
+  .phone2,
+  .email2,
+  .social2 {
+    color: rgba(128, 128, 128, 0.498);
+    width: 80%;
+    text-align: left;
 
     p {
-        text-align: left;
+      font-size: 0.8rem;
     }
+  }
+  .address1 {
+    grid-area: adr1;
+  }
+  .address1:after {
+    position: absolute;
+    content: "";
+    background: rgb(196, 196, 196);
+    height: 1px;
+    width: 50%;
+    left: 50%;
+    top: 25%;
+  }
+  .address2 {
+    justify-content: left;
+    grid-area: adr2;
+  }
+  .phone1 {
+    grid-area: ph1;
+  }
+  .phone1:after {
+    position: absolute;
+    content: "";
+    background: rgb(196, 196, 196);
+    height: 1px;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+  }
+  .phone2 {
+    justify-content: left;
+    grid-area: ph2;
+  }
+  .email1 {
+    grid-area: em1;
+  }
+  .email1:after {
+    position: absolute;
+    content: "";
+    background: rgb(196, 196, 196);
+    height: 1px;
+    width: 50%;
+    left: 50%;
+    top: 75%;
+  }
+  .email2 {
+    justify-content: left;
+    grid-area: em2;
+  }
+  .social1 {
+    grid-area: so1;
+  }
+  .social2 {
+    justify-content: left;
+    grid-area: so2;
+
+    ul {
+      width: 80%;
+      display: flex;
+    }
+    li {
+      display: list-item;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      height: 40px;
+      width: 40px;
+      border: 1px solid rgba(128, 128, 128, 0.341);
+      border-radius: 50px;
+    }
+    a:hover {
+      color: whitesmoke;
+    }
+  }
+}
+.contact-area:after {
+  position: absolute;
+  content: "";
+  transform: translateX(-50%);
+  background: rgb(196, 196, 196);
+  height: 100%;
+  width: 1px;
+  left: 50%;
 }
