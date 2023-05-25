@@ -1,93 +1,101 @@
 header {
   position: relative;
-  margin: 0 auto;
   color: $white1;
   min-height: 100vh;
-}
-.header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  opacity: 0;
 
-  @keyframes headeranim {
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  h1 {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 44%;
-    text-transform: uppercase;
-    font-size: 5rem;
-  }
-  p {
-    margin: 40px auto 70px;
-  }
-  .fa-solid {
-    margin: 0 auto;
+  .header-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
-    border: 2px solid whitesmoke;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: headeranim 1.5s ease forwards;
+    animation-delay: 0.15s;
+
+    @keyframes headeranim {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    h1 {
+      @include title;
+      font-size: 5rem;
+      letter-spacing: 6px;
+    }
+    p {
+      margin: 40px auto 60px;
+      width: 85%;
+    }
+    .fa-solid {
+      border: 2px solid $white1;
+      border-radius: 50px;
+      height: 60px;
+      width: 60px;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   nav {
-    position: absolute;
-    height: 60px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    width: 80%;
-    background: rgba(181, 181, 181, 0.549);
-
+    background: rgba(255, 255, 255, 0.397);
+    color: $white1;
+    width: 85%;
+    height: 65px;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     ul {
       display: flex;
       align-items: center;
     }
-    button {
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100%;
       width: 100%;
-      border: none;
-      color: whitesmoke;
-      background: none;
-    }
-    a {
-      color: whitesmoke;
+      cursor: pointer;
+      transition: 0.3s;
     }
   }
   .nav-tab {
-    width: 45%;
+    // &:hover li:not(:hover) {
+    //   background: none;
+    //   color: $white1;
+    // }
     button {
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      @include title;
+      font-size: 0.7rem;
+      border: none;
+      background: none;
+      height: 100%;
+      color: $white1;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: $white1;
+        color: $black1;
+      }
     }
   }
-  .nav-tab button:hover {
-    cursor: pointer;
-    background: rgb(243, 243, 243);
-    color: rgb(18, 18, 18);
-  }
   .nav-icons {
-    width: 30%;
-    font-size: 1.2rem;
+    width: clamp(100px, 25%, 300px);
+    font-size: 1.1rem;
     li:hover {
-      a {
-        color: rgb(18, 18, 18);
+      i {
+        transform: scale(1.5);
+        color: $black1;
       }
-      cursor: pointer;
-      background: rgb(243, 243, 243);
+      background: $white1;
     }
   }
 }

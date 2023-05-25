@@ -59,32 +59,25 @@ body:before {
 }
 
 p {
-  font-size: 1.1rem;
-  font-family: Merriweather;
+  font-family: merriweather, serif;
   font-style: italic;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 header {
   position: relative;
-  margin: 0 auto;
   color: rgb(243, 243, 243);
   min-height: 100vh;
 }
-
-.header-container {
+header .header-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   opacity: 0;
+  transform: translateY(40px);
+  animation: headeranim 1.5s ease forwards;
+  animation-delay: 0.15s;
 }
 @keyframes headeranim {
   to {
@@ -92,75 +85,80 @@ header {
     opacity: 1;
   }
 }
-.header-container h1 {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 44%;
+header .header-container h1 {
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 5rem;
+  letter-spacing: 6px;
 }
-.header-container p {
-  margin: 40px auto 70px;
+header .header-container p {
+  margin: 40px auto 60px;
+  width: 85%;
 }
-.header-container .fa-solid {
-  margin: 0 auto;
+header .header-container .fa-solid {
+  border: 2px solid rgb(243, 243, 243);
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 60px;
-  border: 2px solid whitesmoke;
-  border-radius: 50px;
-  font-size: 1.1rem;
 }
-.header-container nav {
-  position: absolute;
-  height: 60px;
+header nav {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 80%;
-  background: rgba(181, 181, 181, 0.549);
+  background: rgba(255, 255, 255, 0.397);
+  color: rgb(243, 243, 243);
+  width: 85%;
+  height: 65px;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.header-container nav ul {
+header nav ul {
   display: flex;
   align-items: center;
 }
-.header-container nav button {
+header nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  border: none;
-  color: whitesmoke;
-  background: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.header-container nav a {
-  color: whitesmoke;
-}
-.header-container .nav-tab {
-  width: 45%;
-}
-.header-container .nav-tab button {
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-  font-weight: 800;
+header .nav-tab button {
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
-}
-.header-container .nav-tab button:hover {
+  font-size: 0.7rem;
+  border: none;
+  background: none;
+  height: 100%;
+  color: rgb(243, 243, 243);
+  width: 100%;
   cursor: pointer;
+  transition: 0.3s;
+}
+header .nav-tab button:hover {
   background: rgb(243, 243, 243);
-  color: rgb(18, 18, 18);
+  color: rgb(17, 17, 17);
 }
-.header-container .nav-icons {
-  width: 30%;
-  font-size: 1.2rem;
+header .nav-icons {
+  width: clamp(100px, 25%, 300px);
+  font-size: 1.1rem;
 }
-.header-container .nav-icons li:hover {
-  cursor: pointer;
+header .nav-icons li:hover {
   background: rgb(243, 243, 243);
 }
-.header-container .nav-icons li:hover a {
-  color: rgb(18, 18, 18);
+header .nav-icons li:hover i {
+  transform: scale(1.5);
+  color: rgb(17, 17, 17);
 }
 
 section {
