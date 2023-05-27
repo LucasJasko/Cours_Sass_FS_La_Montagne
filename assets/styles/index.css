@@ -41,8 +41,7 @@ body:before {
     opacity: 0;
   }
 }
-
-.btn {
+body .btn {
   background: none;
   border: 2px solid rgb(17, 17, 17);
   height: 45px;
@@ -54,11 +53,12 @@ body:before {
   text-transform: uppercase;
   transition: 0.2s;
 }
-.btn:hover {
+body .btn:hover {
+  background: rgb(17, 17, 17);
+  color: rgb(243, 243, 243);
   transform: scale(1.05);
 }
-
-p {
+body p {
   font-family: merriweather, serif;
   font-style: italic;
 }
@@ -161,188 +161,150 @@ header .nav-icons li:hover i {
   color: rgb(17, 17, 17);
 }
 
-section {
-  display: grid;
-  margin: 0 auto;
-  width: 80%;
-  background: whitesmoke;
+main {
+  margin: 0 auto 30px;
+  width: 85%;
+  background: rgb(243, 243, 243);
 }
-
-img {
-  display: block;
-  margin: 0 auto;
+main img {
   width: 100%;
 }
-
-section a {
-  font-size: 0.8rem;
-  padding: 10px 30px;
-  letter-spacing: 2px;
-  border: 1px solid rgb(18, 18, 18);
-  color: rgb(18, 18, 18);
-  text-transform: uppercase;
-}
-
-section a:hover {
-  background: rgb(18, 18, 18);
-  color: whitesmoke;
-}
-
-.link1 {
-  margin: 60px auto;
-}
-
-.article1 .article1-container {
+main .article1 {
   margin: 0 auto;
   width: 80%;
-}
-.article1 h4 {
-  font-weight: 100;
   position: relative;
-  margin: 60px auto;
-  font-family: Merriweather;
 }
-.article1 h4:before {
-  position: absolute;
+main .article1 span {
+  display: block;
+  padding: 70px 0;
+  position: relative;
+  font-family: merriweather, serif;
+}
+main .article1 span:before, main .article1 span:after {
   content: "";
+  position: absolute;
+  bottom: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgb(209, 209, 209);
+}
+@media screen and (max-width: 700px) {
+  main .article1 span:before, main .article1 span:after {
+    width: 30%;
+  }
+}
+main .article1 span::before {
   left: 0;
-  bottom: 50%;
-  width: 40%;
-  height: 1px;
-  background: rgba(128, 128, 128, 0.341);
 }
-.article1 h4:after {
-  position: absolute;
-  content: "";
+main .article1 span:after {
   right: 0;
-  bottom: 50%;
-  width: 40%;
-  height: 1px;
-  background: rgba(128, 128, 128, 0.341);
 }
-.article1 h2 {
-  width: 70%;
-  display: block;
-  margin: 60px auto;
-  font-size: 4rem;
+main .article1 h2 {
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  font-size: 3rem;
 }
-.article1 p {
-  display: block;
-  margin: 60px auto;
-  width: 70%;
-  line-height: 40px;
-}
-
-.article1-container:after {
-  position: absolute;
-  content: "";
-  transform: translateX(-50%);
-  background: rgb(218, 218, 218);
-  height: 1px;
-  width: 80%;
-}
-
-.article2-3 {
-  display: flex;
-}
-
-.article2,
-.article3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.article2 h5,
-.article3 h5 {
-  margin-top: 60px;
-  text-align: center;
-  height: 50px;
-  font-family: Merriweather;
-  font-weight: 100;
-}
-.article2 h3,
-.article3 h3 {
-  margin: 0 auto 20px;
-  font-size: 1.5rem;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+main .article1 p {
+  margin: 30px auto;
   width: 60%;
+  line-height: 35px;
+  font-size: 0.8rem;
 }
-.article2 p,
-.article3 p {
-  display: block;
-  margin: 60px auto;
-  line-height: 40px;
-  text-align: left;
+main .article1 .btn {
+  margin: 50px 0 90px;
+  bottom: 0;
 }
-
-.article2 {
-  position: relative;
-}
-
-.article2:after {
-  position: absolute;
-  right: 0;
-  content: "";
-  background: rgb(218, 218, 218);
-  height: 100%;
-  width: 1px;
-}
-
-.article2-container,
-.article3-container {
-  width: 80%;
-}
-
-.contact-area {
-  position: relative;
-  margin: 30px auto 60px;
+main .article2-3 {
   display: grid;
-  grid-template-columns: 50% 10% 40%;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid rgb(209, 209, 209);
+}
+main .article2-3 .article2,
+main .article2-3 .article3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+main .article2-3 .article2 span,
+main .article2-3 .article3 span {
+  font-size: 0.75rem;
+  font-family: merriweather, serif;
+}
+main .article2-3 .article2 h3,
+main .article2-3 .article3 h3 {
+  margin: 20px auto;
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 28px;
+  height: 56px;
+}
+main .article2-3 .article2 p,
+main .article2-3 .article3 p {
+  margin: 30px 0;
+  line-height: 30px;
+  text-align: left;
+  font-style: 0.8rem;
+}
+main .article2-3 .article2 {
+  border-right: 1px solid rgb(209, 209, 209);
+}
+
+footer {
+  width: 85%;
+  background: rgb(243, 243, 243);
+  position: relative;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 150px 150px 150px 150px;
   grid-template-areas: "form adr1 adr2" "form ph1 ph2" "form em1 em2" "form so1 so2";
 }
-.contact-area h6 {
+footer h3 {
   color: gray;
   text-transform: uppercase;
 }
-.contact-area p {
+footer p {
   text-align: left;
 }
-.contact-area form {
+footer form {
   grid-area: form;
+  display: grid;
+  grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+  gap: 18px;
+  padding: 60px 50px;
 }
-.contact-area form label,
-.contact-area form input,
-.contact-area form textarea {
+footer form label,
+footer form input,
+footer form textarea {
+  width: 100%;
   text-align: left;
-  margin: 30px auto;
-  width: 90%;
-  display: block;
-  color: rgb(113, 113, 113);
+  color: rgb(105, 105, 105);
 }
-.contact-area form label {
+footer form label {
+  display: flex;
+  align-items: flex-end;
   font-size: 0.7rem;
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
-.contact-area form input[type=text] {
-  border: 1px solid rgba(128, 128, 128, 0.442);
+footer form input[type=text],
+footer form textarea {
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px;
   border-radius: 3px;
   height: 30px;
   outline: none;
-}
-.contact-area form textarea {
   resize: none;
-  outline: none;
-  border: 1px solid rgba(128, 128, 128, 0.431);
-  border-radius: 3px;
+}
+footer form textarea {
   height: 200px;
 }
-.contact-area form input[type=submit] {
+footer form input[type=submit] {
   text-align: center;
   font-size: 0.8rem;
   padding: 10px 30px;
@@ -350,46 +312,28 @@ section a:hover {
   border: 1px solid rgb(184, 184, 184);
   color: rgb(113, 113, 113);
   text-transform: uppercase;
-  width: 30%;
 }
-.contact-area form input[type=submit]:hover {
-  background: rgb(18, 18, 18);
-  color: whitesmoke;
+footer form input[type=submit]:hover {
+  background: rgb(17, 17, 17);
+  color: rgb(243, 243, 243);
+  transform: scale(1.05);
 }
-.contact-area .address1,
-.contact-area .address2,
-.contact-area .phone1,
-.contact-area .phone2,
-.contact-area .email1,
-.contact-area .email2,
-.contact-area .social1,
-.contact-area .social2 {
+footer form:after {
+  position: absolute;
+  content: "";
+  transform: translateX(-50%);
+  background: rgb(196, 196, 196);
+  height: 100%;
+  width: 1px;
+  left: 50%;
+}
+footer .info-contact div {
   margin: auto;
 }
-.contact-area .address1,
-.contact-area .phone1,
-.contact-area .email1,
-.contact-area .social1 {
-  text-align: center;
-}
-.contact-area .address2,
-.contact-area .phone2,
-.contact-area .email2,
-.contact-area .social2 {
-  color: rgba(128, 128, 128, 0.498);
-  width: 80%;
-  text-align: left;
-}
-.contact-area .address2 p,
-.contact-area .phone2 p,
-.contact-area .email2 p,
-.contact-area .social2 p {
+footer .info-contact div p {
   font-size: 0.8rem;
 }
-.contact-area .address1 {
-  grid-area: adr1;
-}
-.contact-area .address1:after {
+footer .address1:after {
   position: absolute;
   content: "";
   background: rgb(196, 196, 196);
@@ -398,14 +342,7 @@ section a:hover {
   left: 50%;
   top: 25%;
 }
-.contact-area .address2 {
-  justify-content: left;
-  grid-area: adr2;
-}
-.contact-area .phone1 {
-  grid-area: ph1;
-}
-.contact-area .phone1:after {
+footer .phone1:after {
   position: absolute;
   content: "";
   background: rgb(196, 196, 196);
@@ -414,14 +351,7 @@ section a:hover {
   left: 50%;
   top: 50%;
 }
-.contact-area .phone2 {
-  justify-content: left;
-  grid-area: ph2;
-}
-.contact-area .email1 {
-  grid-area: em1;
-}
-.contact-area .email1:after {
+footer .email1:after {
   position: absolute;
   content: "";
   background: rgb(196, 196, 196);
@@ -430,44 +360,18 @@ section a:hover {
   left: 50%;
   top: 75%;
 }
-.contact-area .email2 {
-  justify-content: left;
-  grid-area: em2;
-}
-.contact-area .social1 {
-  grid-area: so1;
-}
-.contact-area .social2 {
-  justify-content: left;
-  grid-area: so2;
-}
-.contact-area .social2 ul {
+footer ul {
   width: 80%;
   display: flex;
 }
-.contact-area .social2 li {
+footer li {
   display: list-item;
 }
-.contact-area .social2 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer i {
+  color: rgb(209, 209, 209);
   padding: 0;
   height: 40px;
   width: 40px;
   border: 1px solid rgba(128, 128, 128, 0.341);
   border-radius: 50px;
-}
-.contact-area .social2 a:hover {
-  color: whitesmoke;
-}
-
-.contact-area:after {
-  position: absolute;
-  content: "";
-  transform: translateX(-50%);
-  background: rgb(196, 196, 196);
-  height: 100%;
-  width: 1px;
-  left: 50%;
 }/*# sourceMappingURL=index.css.map */

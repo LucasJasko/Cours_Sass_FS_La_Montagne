@@ -1,15 +1,17 @@
-.contact-area {
+footer {
+  width: 85%;
+  background: $white1;
   position: relative;
-  margin: 30px auto 60px;
+  margin: 0 auto 70px;
   display: grid;
-  grid-template-columns: 50% 10% 40%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 150px 150px 150px 150px;
   grid-template-areas:
     "form adr1 adr2"
     "form ph1 ph2"
     "form em1 em2"
     "form so1 so2";
-  h6 {
+  h3 {
     color: gray;
     text-transform: uppercase;
   }
@@ -18,31 +20,33 @@
   }
   form {
     grid-area: form;
-
+    display: grid;
+    grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+    gap: 18px;
+    padding: 60px 50px;
     label,
     input,
     textarea {
+      width: 100%;
       text-align: left;
-      margin: 30px auto;
-      width: 90%;
-      display: block;
-      color: rgb(113, 113, 113);
+      color: $grey3;
     }
     label {
+      display: flex;
+      align-items: flex-end;
       font-size: 0.7rem;
-      text-transform: uppercase;
+      @include title;
     }
-    input[type="text"] {
-      border: 1px solid rgba(128, 128, 128, 0.442);
+    input[type="text"],
+    textarea {
+      border: 1px solid $grey1;
+      padding: 10px;
       border-radius: 3px;
       height: 30px;
       outline: none;
+      resize: none;
     }
     textarea {
-      resize: none;
-      outline: none;
-      border: 1px solid rgba(128, 128, 128, 0.431);
-      border-radius: 3px;
       height: 200px;
     }
     input[type="submit"] {
@@ -53,44 +57,27 @@
       border: 1px solid rgb(184, 184, 184);
       color: rgb(113, 113, 113);
       text-transform: uppercase;
-      width: 30%;
+      &:hover {
+        background: $black1;
+        color: $white1;
+        transform: scale(1.05);
+      }
     }
-    input[type="submit"]:hover {
-      background: rgb(18, 18, 18);
-      color: whitesmoke;
+    &:after {
+      position: absolute;
+      content: "";
+      transform: translateX(-50%);
+      background: rgb(196, 196, 196);
+      height: 100%;
+      width: 1px;
+      left: 50%;
     }
   }
-  .address1,
-  .address2,
-  .phone1,
-  .phone2,
-  .email1,
-  .email2,
-  .social1,
-  .social2 {
+  .info-contact div {
     margin: auto;
-  }
-
-  .address1,
-  .phone1,
-  .email1,
-  .social1 {
-    text-align: center;
-  }
-  .address2,
-  .phone2,
-  .email2,
-  .social2 {
-    color: rgba(128, 128, 128, 0.498);
-    width: 80%;
-    text-align: left;
-
     p {
       font-size: 0.8rem;
     }
-  }
-  .address1 {
-    grid-area: adr1;
   }
   .address1:after {
     position: absolute;
@@ -101,13 +88,6 @@
     left: 50%;
     top: 25%;
   }
-  .address2 {
-    justify-content: left;
-    grid-area: adr2;
-  }
-  .phone1 {
-    grid-area: ph1;
-  }
   .phone1:after {
     position: absolute;
     content: "";
@@ -116,13 +96,6 @@
     width: 50%;
     left: 50%;
     top: 50%;
-  }
-  .phone2 {
-    justify-content: left;
-    grid-area: ph2;
-  }
-  .email1 {
-    grid-area: em1;
   }
   .email1:after {
     position: absolute;
@@ -133,45 +106,19 @@
     left: 50%;
     top: 75%;
   }
-  .email2 {
-    justify-content: left;
-    grid-area: em2;
+  ul {
+    width: 80%;
+    display: flex;
   }
-  .social1 {
-    grid-area: so1;
+  li {
+    display: list-item;
   }
-  .social2 {
-    justify-content: left;
-    grid-area: so2;
-
-    ul {
-      width: 80%;
-      display: flex;
-    }
-    li {
-      display: list-item;
-    }
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      height: 40px;
-      width: 40px;
-      border: 1px solid rgba(128, 128, 128, 0.341);
-      border-radius: 50px;
-    }
-    a:hover {
-      color: whitesmoke;
-    }
+  i {
+    color: $grey1;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(128, 128, 128, 0.341);
+    border-radius: 50px;
   }
-}
-.contact-area:after {
-  position: absolute;
-  content: "";
-  transform: translateX(-50%);
-  background: rgb(196, 196, 196);
-  height: 100%;
-  width: 1px;
-  left: 50%;
 }
